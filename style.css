@@ -1,0 +1,493 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    cursor: pointer;
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 99999;
+}
+#loader #box{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: tomato; */
+}
+#loader .circle{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+}
+#menu{
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+    position: fixed;
+    z-index: 999;
+}
+#menu #one{
+    width: 100%;
+    height: 0;
+    background-color: black;
+}
+#menu #two{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: -10%;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#menu #two #title{
+    width: 80%;
+    height: 100%;
+    /* background-color: tomato; */
+    margin-top: 6%;
+}
+#menu #two #title button{
+    width: 100%;
+    height:14% ;
+    background-color: transparent;
+    /* background-color: yellow; */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#menu #two #title button:nth-child(even){
+    justify-content: flex-end;
+}
+
+
+#menu #two #title button .text{
+    width: 40%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    /* text-align: center; */
+    /* border-bottom: 2px solid white; */
+    font-family: gilroy;
+    position: relative;
+}
+#menu #two #title button .text::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+#menu #two #title button .text .number{
+    width: 80px;
+    height: 80px;
+    /* background-color: royalblue; */
+    border: 2px solid white;
+    font-size: 4vw;
+    border-radius: 50%;
+}
+#menu #two #title button .text .name{
+    width: 90%;
+    height: 80px;
+    font-size: 2.5vw;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+}
+#main{
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* background-color:aqua; */
+    position: relative;
+    overflow: hidden;
+}
+#main #navbar #name h1{
+    font-family: gilroy;
+    height: max-content;
+    font-size: 2vw;
+    line-height: 1;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    color: gray;
+    z-index: 99;
+    mix-blend-mode: difference;
+}
+#main #navbar #menutext button{
+    font-family: gilroy;
+    font-size: 1.5vw;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    z-index: 9999;
+    color: gray;
+    mix-blend-mode: difference;
+}
+#main #page1{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 990;
+}
+#main #page1 #scroll h3{
+    font-family: gilroy;
+    font-size: 3vw;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    text-transform: capitalize;
+}
+#main #page1 #heading h1{
+    font-size: 19vw;
+    font-family: gilroy;
+    line-height: 1;
+}
+#main #page1 #heading span{
+    display:inline-block;
+}
+#main #page1 #photo{
+    width: 200px;
+    height: 200px;
+    background-color: navajowhite;
+    position: absolute;
+    bottom: 50px;
+    right:100px;
+}
+#main #page1 #photo img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#main #page2{
+    width: 100%;
+    height: 200vh;
+    /* background-color: springgreen; */
+    position: relative;
+}
+#main #page2 #textbox{
+    width: 50%;
+    height: 100vh;
+    /* background-color: tomato; */
+    padding: 100px 0 0 50px;
+    position: absolute;
+    left: 40%;
+    text-indent: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+#main #page2 #textbox h1{
+    font-family: gilroy;
+    width: 90%;
+    line-height: 1.3;
+}
+
+#main #page3{
+    width: 100%;
+    height: 250vh;
+    /* background-color: royalblue; */
+    position: relative;
+}
+#main #page3 #p3box{
+    width: 65%;
+    height: 70vh;
+    /* background-color: tomato; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#main #page3 #p3box h1{
+    font-family: gilroy;
+    line-height: 1.2;
+    font-size: 6.5vw;
+    font-weight: 400;
+}
+#main #page3 #p3box #smallbox{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+#main #page3 #p3box #line{
+    width: 100px;
+    height: 1.5px;
+    background-color: black;
+}
+#main #page3 #p3box h3{
+    font-family: gilroy;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+#main #page4{
+    width: 100%;
+    height: 250vh;
+    /* background-color: royalblue; */
+    position: relative;
+}
+#main #page4 #p4box{
+    width: 65%;
+    height: 70vh;
+    /* background-color: tomato; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#main #page4 #p4box h1{
+    font-family: gilroy;
+    line-height: 1.2;
+    font-size: 6.5vw;
+    font-weight: 400;
+}
+#main #page4 #p4box #smallbox{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+#main #page4 #p4box #line{
+    width: 100px;
+    height: 1.5px;
+    background-color: black;
+}
+#main #page4 #p4box h3{
+    font-family: gilroy;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+
+
+#main #page5{
+    width: 100%;
+    height: 230vh;
+    /* background-color: royalblue; */
+    position: relative;
+}
+#main #page5 #p5box{
+    width: 65%;
+    height: 70vh;
+    /* background-color: tomato; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#main #page5 #p5box h1{
+    font-family: gilroy;
+    line-height: 1.2;
+    font-size: 6.5vw;
+    font-weight: 400;
+}
+#main #page5 #p5box #smallbox{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+#main #page5 #p5box #line{
+    width: 100px;
+    height: 1.5px;
+    background-color: black;
+}
+#main #page5 #p5box h3{
+    font-family: gilroy;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+
+#main #page6{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#main #page6 #box {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 100%;
+}
+#main #page6 #box::-webkit-scrollbar{
+    display: none;
+}
+
+#main #page6 #box .photo{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(163, 225, 241);
+    width: 500px;
+    
+}
+
+#main #page6 #box .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+#main #page7{
+    width: 100%;
+    height: 100vh;
+    background-color:white;
+    display: flex;
+    align-items: center;
+}
+#main #page7 #overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    right: -100%;
+}
+
+
+#main #page7 #box{
+    width: 100%;
+    height: 75vh;
+    /* background-color: tomato; */
+}
+#main #page7 #box .part{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+} 
+#main #page7 #box .part h1{
+    font-family: gilroy;
+    font-size: 15vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    mix-blend-mode: difference;
+}
+#main #page7 #box .part h1 span{
+    display: inline-block;
+}
+/* #main #page7 #box #text1{
+    background-color: springgreen;
+}
+#main #page7 #box #text2{
+    background-color: rgb(0, 123, 255);
+}
+#main #page7 #box #text3{
+    background-color: rgb(255, 213, 0);
+} */
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Page 8 */
+#main #page8{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    /* position: relative; */
+}
+#main #page8 #box{
+    width: 280%;
+    height: 100vh;
+    background-color:black;
+    position: absolute;
+    right: -280%;
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: center; */
+    
+}
+#main #page8 h1{
+    font-size: 35vw;
+    font-family: gilroy;
+    color: white;
+    display: flex;
+    /* background-color: red; */
+}
+/* #main #page8 h1 span{
+    line-height: 1;
+    display: inline-flex;
+} */
+/* #main #page8 h1 span:nth-child(even){
+    color: springgreen;
+} */
+
+
+
+
+
+#main #page9{
+    widows: 100%;
+    height: 100vh;
+    background-color: black;
+}
