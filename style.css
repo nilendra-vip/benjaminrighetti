@@ -1,3 +1,12 @@
+@font-face {
+    font-family: gilroy;
+    src: url(./fonts/Gilroy-Regular.otf);
+}
+@font-face {
+    font-family:helvetica ;
+    src: url(./fonts/HelveticaNowDisplay-Regular.otf);
+}
+
 *{
     margin: 0%;
     padding: 0%;
@@ -99,7 +108,7 @@ button{
     color: white;
     /* text-align: center; */
     /* border-bottom: 2px solid white; */
-    font-family: gilroy;
+    font-family:helvetica;
     position: relative;
 }
 #menu #two #title button .text::after{
@@ -136,7 +145,7 @@ button{
     overflow: hidden;
 }
 #main #navbar #name h1{
-    font-family: gilroy;
+    font-family:helvetica;
     height: max-content;
     font-size: 2vw;
     line-height: 1;
@@ -148,7 +157,7 @@ button{
     mix-blend-mode: difference;
 }
 #main #navbar #menutext button{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 1.5vw;
     position: fixed;
     top: 30px;
@@ -170,7 +179,7 @@ button{
     z-index: 990;
 }
 #main #page1 #scroll h3{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 3vw;
     position: absolute;
     left: 20px;
@@ -179,7 +188,7 @@ button{
 }
 #main #page1 #heading h1{
     font-size: 19vw;
-    font-family: gilroy;
+    font-family: helvetica;
     line-height: 1;
 }
 #main #page1 #heading span{
@@ -224,7 +233,7 @@ button{
     
 }
 #main #page2 #textbox h1{
-    font-family: gilroy;
+    font-family:helvetica;
     width: 90%;
     line-height: 1.3;
 }
@@ -248,7 +257,7 @@ button{
     flex-direction: column;
 }
 #main #page3 #p3box h1{
-    font-family: gilroy;
+    font-family:helvetica;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
@@ -265,7 +274,7 @@ button{
     background-color: black;
 }
 #main #page3 #p3box h3{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 1.5vw;
     font-weight: 400;
 }
@@ -288,7 +297,7 @@ button{
     flex-direction: column;
 }
 #main #page4 #p4box h1{
-    font-family: gilroy;
+    font-family:helvetica;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
@@ -305,7 +314,7 @@ button{
     background-color: black;
 }
 #main #page4 #p4box h3{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 1.5vw;
     font-weight: 400;
 }
@@ -331,7 +340,7 @@ button{
     flex-direction: column;
 }
 #main #page5 #p5box h1{
-    font-family: gilroy;
+    font-family:helvetica;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
@@ -348,7 +357,7 @@ button{
     background-color: black;
 }
 #main #page5 #p5box h3{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 1.5vw;
     font-weight: 400;
 }
@@ -426,7 +435,7 @@ button{
     justify-content:center;
 } 
 #main #page7 #box .part h1{
-    font-family: gilroy;
+    font-family:helvetica;
     font-size: 15vw;
     text-transform: uppercase;
     font-weight: bold;
@@ -469,7 +478,7 @@ button{
 }
 #main #page8 h1{
     font-size: 35vw;
-    font-family: gilroy;
+    font-family:helvetica;
     color: white;
     display: flex;
     /* background-color: red; */
