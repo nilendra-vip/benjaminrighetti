@@ -98,18 +98,18 @@ function page1(){
             },
             y:-650,
             duration:3,
-            stagger:0.2
+            stagger:-0.2
         })
         gsap.to("#page1 h1:nth-child(2) span", {
             scrollTrigger:{
                 trigger:"#page1",
-                start:"bottom bottom",
+                start:"bottom 93%",
                 scrub:0.5,
                 // markers:true
             },
             y:-650,
             duration:3,
-            stagger:0.2
+            stagger:-0.2
         })
         ScrollTrigger.create({
             trigger: "#page1",
@@ -263,7 +263,7 @@ function page6(){
             trigger:"#page6 .photo",
             start:"top top",
             // end:"bottom bo",
-            scrub:1,
+            scrub:10,
             // pin:true,
             // markers:true
         },
@@ -276,7 +276,7 @@ function page6(){
     ScrollTrigger.create({
         trigger: "#page6",
         start: "top top",
-        end:"bottom 35%",
+        end:"bottom top",
         pin: true,
         // markers:true
     })
@@ -295,7 +295,7 @@ function page7(){
         y:500,
         // x:100,
         duration:5,
-        ease: "elastic.out(1, 0.3)",
+        // ease: "elastic.out(1, 0.3)",
         stagger:1,
         opacity:0
     })
@@ -311,7 +311,7 @@ function page7(){
         delay:5,
         duration:5,
         stagger:1,
-        ease: "elastic.out(1, 0.3)",
+        // ease: "elastic.out(1, 0.3)",
         opacity:0
     })
     gsap.to("#page7 #overlay",{
@@ -338,59 +338,78 @@ page7();
 
 function page8(){
     var time=gsap.timeline();
-time.to("#main #page8 #box",{
-    scrollTrigger:{
-        trigger:"#main #page8 #box",
-        start:"bottom bottom",
-        scrub:1,
+    time.to("#main #page8 #box",{
+        scrollTrigger:{
+            trigger:"#main #page8 #box",
+            start:"bottom bottom",
+            scrub:1,
+            // markers:true
+        },
+        x: "-100%",
+        duration:2,
+        ease: "none"
+    })
+    time.from("#page8 h1 span:nth-child(odd)",{
+        scrollTrigger:{
+            trigger:"#page8 h1 span:nth-child(odd)",
+            start:"15% 50%",
+            // end:"bottom top",
+            scrub:true,
+            // markers:true,
+        },
+        // x:-300,
+        y:200,
+        duration:2,
+        stagger:0.5,
+        opacity:0,
+        ease:"none"
+        
+    })
+    time.from("#page8 h1 span:nth-child(even)",{
+        scrollTrigger:{
+            trigger:"#page8 h1 span",
+            start:"50% 80%",
+            // end:"bottom -20%",
+            scrub:true,
+            // markers:true,
+        },
+        // x:200,
+        y:-300,
+        duration:2,
+        stagger:0.5,
+        opacity:0,
+        ease:"none"
+    })
+
+
+
+    ScrollTrigger.create({
+        trigger: "#page8",
+        start: "top top",
+        end:"bottom -30%",
+        pin: true,
         // markers:true
-    },
-    x: "-100%",
-    duration:2,
-    ease: "none"
-})
-time.from("#page8 h1 span:nth-child(odd)",{
-    scrollTrigger:{
-        trigger:"#page8 h1 span:nth-child(odd)",
-        start:"15% 50%",
-        // end:"bottom top",
-        scrub:true,
-        // markers:true,
-    },
-    // x:-300,
-    y:200,
-    duration:2,
-    stagger:0.5,
-    opacity:0,
-    ease:"none"
-    
-})
-time.from("#page8 h1 span:nth-child(even)",{
-    scrollTrigger:{
-        trigger:"#page8 h1 span",
-        start:"50% 80%",
-        // end:"bottom -20%",
-        scrub:true,
-        // markers:true,
-    },
-    // x:200,
-    y:-300,
-    duration:2,
-    stagger:0.5,
-    opacity:0,
-    ease:"none"
-})
-
-
-
-ScrollTrigger.create({
-    trigger: "#page8",
-    start: "top top",
-    end:"bottom -30%",
-    pin: true,
-    // markers:true
-})
+    })
 }
 page8();
+
+
+function page9(){
+    gsap.to("#page9 .big",{
+        scrollTrigger:{
+            trigger:"#page9 .big",
+            scrub:0.5,
+            start:"bottom 70%",
+            end:"bottom 30%",
+            // markers:true,
+        },
+        y:150,
+        scale:4,
+        duration:3
+    })    
+}
+page9();
+
+
 
 
