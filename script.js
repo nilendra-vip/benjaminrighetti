@@ -21,6 +21,37 @@ function loader(){
 }
 loader();
 
+
+function locomotive(){
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("#main"),
+      smooth: true
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    ScrollTrigger.scrollerProxy("#main", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+    
+      pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+    
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    
+    ScrollTrigger.refresh();
+}
+locomotive();
+
+
+
+
+
 function menu(){
     var flag=0;
     document.querySelector("#main #navbar #menutext button").addEventListener("click", function(){
@@ -93,6 +124,7 @@ function page1(){
             scrollTrigger:{
                 trigger:"#page1",
                 start:"bottom bottom",
+                scroller : "#main",
                 scrub:0.5,
                 // markers:true
             },
@@ -104,6 +136,7 @@ function page1(){
             scrollTrigger:{
                 trigger:"#page1",
                 start:"bottom 93%",
+                scroller : "#main",
                 scrub:0.5,
                 // markers:true
             },
@@ -114,6 +147,7 @@ function page1(){
         ScrollTrigger.create({
             trigger: "#page1",
             start: "bottom 100%",
+            scroller : "#main",
             pin: true,
             // markers:true
         })
@@ -126,6 +160,7 @@ function page1(){
         gsap.to("#page1 #photo",{
             scrollTrigger:{
                 trigger:"#page1 #photo",
+                scroller : "#main",
                 scrub:0.5,
                 start:"bottom 50%",
                 // markers:true,
@@ -146,6 +181,7 @@ function page2(){
     gsap.to("#page2 #textbox h1",{
         scrollTrigger:{
             trigger:"#page2 #textbox",
+            scroller : "#main",
             start:"top top",
             scrub:true,
             pin:true,
@@ -163,6 +199,7 @@ function page3(){
     t1.to("#page3 span:nth-child(odd)",{
         scrollTrigger:{
             trigger:"#page3 #p3box",
+            scroller : "#main",
             start:"bottom 90%",
             end:"bottom 20%",
             scrub:true,
@@ -175,6 +212,7 @@ function page3(){
     t1.to("#page3 span:nth-child(even),#page3 #line",{
         scrollTrigger:{
             trigger:"#page3 #p3box",
+            scroller : "#main",
             start:"top 19%",
             scrub:true,
             pin:true,
@@ -196,6 +234,7 @@ function page4(){
         t1.to("#page4 span:nth-child(even)",{
             scrollTrigger:{
                 trigger:"#page4 #p4box",
+                scroller : "#main",
                 start:"bottom 90%",
                 end:"bottom 20%",
                 scrub:true,
@@ -208,6 +247,7 @@ function page4(){
         t1.to("#page4 span:nth-child(odd),#page4 #line",{
             scrollTrigger:{
                 trigger:"#page4 #p4box",
+                scroller : "#main",
                 start:"top 19%",
                 scrub:true,
                 pin:true,
@@ -229,6 +269,7 @@ function page5(){
     t1.to("#page5 span:nth-child(odd)",{
         scrollTrigger:{
             trigger:"#page5 #p5box",
+            scroller : "#main",
             start:"bottom 90%",
             end:"bottom 20%",
             scrub:true,
@@ -241,6 +282,7 @@ function page5(){
     t1.to("#page5 span:nth-child(even),#page5 #line",{
         scrollTrigger:{
             trigger:"#page5 #p5box",
+            scroller : "#main",
             start:"top 19%",
             scrub:true,
             pin:true,
@@ -261,6 +303,7 @@ function page6(){
     gsap.to("#page6 #box",{
         scrollTrigger:{
             trigger:"#page6 .photo",
+            scroller : "#main",
             start:"top top",
             // end:"bottom bo",
             scrub:10,
@@ -275,6 +318,7 @@ function page6(){
     })
     ScrollTrigger.create({
         trigger: "#page6",
+        scroller : "#main",
         start: "top top",
         end:"bottom top",
         pin: true,
@@ -288,6 +332,7 @@ function page7(){
     gsap.from("#page7 span:nth-child(odd)",{
         scrollTrigger:{
             trigger:"#page7 span:nth-child(odd)",
+            scroller : "#main",
             start:"bottom 100%",
             scrub:true,
             // markers:true
@@ -302,6 +347,7 @@ function page7(){
     gsap.from("#page7 span:nth-child(even)",{
         scrollTrigger:{
             trigger:"#page7 span:nth-child(even)",
+            scroller : "#main",
             start:"bottom 100%",
             scrub:true,
             // markers:true
@@ -317,6 +363,7 @@ function page7(){
     gsap.to("#page7 #overlay",{
         scrollTrigger:{
             trigger:"#page7",
+            scroller : "#main",
             // scroller:"#page7",
             start:"bottom top",
             end:"+=3000px",
@@ -328,6 +375,7 @@ function page7(){
     })
     ScrollTrigger.create({
         trigger: "#page7",
+        scroller : "#main",
         start: "top top",
         end:"bottom -390%",
         pin: true,
@@ -341,6 +389,7 @@ function page8(){
     time.to("#main #page8 #box",{
         scrollTrigger:{
             trigger:"#main #page8 #box",
+            scroller : "#main",
             start:"bottom bottom",
             scrub:1,
             // markers:true
@@ -352,6 +401,7 @@ function page8(){
     time.from("#page8 h1 span:nth-child(odd)",{
         scrollTrigger:{
             trigger:"#page8 h1 span:nth-child(odd)",
+            scroller : "#main",
             start:"15% 50%",
             // end:"bottom top",
             scrub:true,
@@ -368,6 +418,7 @@ function page8(){
     time.from("#page8 h1 span:nth-child(even)",{
         scrollTrigger:{
             trigger:"#page8 h1 span",
+            scroller : "#main",
             start:"50% 80%",
             // end:"bottom -20%",
             scrub:true,
@@ -385,6 +436,7 @@ function page8(){
 
     ScrollTrigger.create({
         trigger: "#page8",
+        scroller : "#main",
         start: "top top",
         end:"bottom -30%",
         pin: true,
@@ -398,6 +450,7 @@ function page9(){
     gsap.to("#page9 .big",{
         scrollTrigger:{
             trigger:"#page9 .big",
+            scroller : "#main",
             scrub:0.5,
             start:"bottom 70%",
             end:"bottom 30%",

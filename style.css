@@ -7,6 +7,7 @@
     src: url(./fonts/HelveticaNowDisplay-Regular.otf);
 }
 
+
 *{
     margin: 0%;
     padding: 0%;
@@ -35,7 +36,7 @@ button{
     position: fixed;
     bottom: 0;
     overflow: hidden;
-    z-index: 99999;
+    z-index: 999999;
 }
 #loader #box{
     display: flex;
@@ -56,7 +57,7 @@ button{
 }
 #menu{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     /* background-color: tomato; */
     position: fixed;
     z-index: 999;
@@ -144,7 +145,7 @@ button{
     position: relative;
     overflow: hidden;
 }
-#main #navbar #name h1{
+#navbar #name h1{
     font-family: gilroy;
     height: max-content;
     font-size: 2vw;
@@ -156,7 +157,7 @@ button{
     z-index: 99;
     mix-blend-mode: difference;
 }
-#main #navbar #menutext button{
+#navbar #menutext button{
     font-family: gilroy;
     font-size: 1.5vw;
     position: fixed;
@@ -169,7 +170,7 @@ button{
     color: gray;
     mix-blend-mode: difference;
 }
-#main #page1{
+#page1{
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -178,7 +179,7 @@ button{
     justify-content: center;
     z-index: 990;
 }
-#main #page1 #scroll h3{
+#page1 #scroll h3{
     font-family: gilroy;
     font-size: 3vw;
     position: absolute;
@@ -186,23 +187,23 @@ button{
     bottom: 20px;
     text-transform: capitalize;
 }
-#main #page1 #heading h1{
+#page1 #heading h1{
     font-size: 19vw;
     font-family: gilroy;
-    line-height: 1;
+    line-height: .7;
 }
-#main #page1 #heading span{
+#page1 #heading span{
     display:inline-block;
 }
-#main #page1 #photo{
+#page1 #photo{
     width: 200px;
     height: 200px;
-    background-color: navajowhite;
+    /* background-color: navajowhite; */
     position: absolute;
     bottom: 50px;
     right:100px;
 }
-#main #page1 #photo img{
+#page1 #photo img{
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -211,13 +212,13 @@ button{
 
 
 
-#main #page2{
+#page2{
     width: 100%;
     height: 200vh;
     /* background-color: springgreen; */
     position: relative;
 }
-#main #page2 #textbox{
+#page2 #textbox{
     width: 50%;
     height: 100vh;
     /* background-color: tomato; */
@@ -232,19 +233,19 @@ button{
     gap: 30px;
     
 }
-#main #page2 #textbox h1{
+#page2 #textbox h1{
     font-family: gilroy;
     width: 90%;
     line-height: 1.3;
 }
 
-#main #page3{
+#page3{
     width: 100%;
     height: 250vh;
     /* background-color: royalblue; */
     position: relative;
 }
-#main #page3 #p3box{
+#page3 #p3box{
     width: 65%;
     height: 70vh;
     /* background-color: tomato; */
@@ -256,35 +257,35 @@ button{
     justify-content: space-around;
     flex-direction: column;
 }
-#main #page3 #p3box h1{
+#page3 #p3box h1{
     font-family: gilroy;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
 }
-#main #page3 #p3box #smallbox{
+#page3 #p3box #smallbox{
     display: flex;
     align-items: center;
     gap: 40px;
 
 }
-#main #page3 #p3box #line{
+#page3 #p3box #line{
     width: 100px;
     height: 1.5px;
     background-color: black;
 }
-#main #page3 #p3box h3{
+#page3 #p3box h3{
     font-family: gilroy;
     font-size: 1.5vw;
     font-weight: 400;
 }
-#main #page4{
+#page4{
     width: 100%;
     height: 250vh;
     /* background-color: royalblue; */
     position: relative;
 }
-#main #page4 #p4box{
+#page4 #p4box{
     width: 65%;
     height: 70vh;
     /* background-color: tomato; */
@@ -296,24 +297,24 @@ button{
     justify-content: space-around;
     flex-direction: column;
 }
-#main #page4 #p4box h1{
+#page4 #p4box h1{
     font-family: gilroy;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
 }
-#main #page4 #p4box #smallbox{
+#page4 #p4box #smallbox{
     display: flex;
     align-items: center;
     gap: 40px;
 
 }
-#main #page4 #p4box #line{
+#page4 #p4box #line{
     width: 100px;
     height: 1.5px;
     background-color: black;
 }
-#main #page4 #p4box h3{
+#page4 #p4box h3{
     font-family: gilroy;
     font-size: 1.5vw;
     font-weight: 400;
@@ -321,13 +322,13 @@ button{
 
 
 
-#main #page5{
+#page5{
     width: 100%;
     height: 230vh;
     /* background-color: royalblue; */
     position: relative;
 }
-#main #page5 #p5box{
+#page5 #p5box{
     width: 65%;
     height: 70vh;
     /* background-color: tomato; */
@@ -339,31 +340,31 @@ button{
     justify-content: space-around;
     flex-direction: column;
 }
-#main #page5 #p5box h1{
+#page5 #p5box h1{
     font-family: gilroy;
     line-height: 1.2;
     font-size: 6.5vw;
     font-weight: 400;
 }
-#main #page5 #p5box #smallbox{
+#page5 #p5box #smallbox{
     display: flex;
     align-items: center;
     gap: 40px;
 
 }
-#main #page5 #p5box #line{
+#page5 #p5box #line{
     width: 100px;
     height: 1.5px;
     background-color: black;
 }
-#main #page5 #p5box h3{
+#page5 #p5box h3{
     font-family: gilroy;
     font-size: 1.5vw;
     font-weight: 400;
 }
 
 
-#main #page6{
+#page6{
     width: 100%;
     height: 100vh;
     background-color:black;
@@ -373,7 +374,7 @@ button{
 }
 
 
-#main #page6 #box {
+#page6 #box {
     display: flex;
     gap: 20px;
     justify-content: space-between;
@@ -382,11 +383,11 @@ button{
     position: absolute;
     left: 100%;
 }
-#main #page6 #box::-webkit-scrollbar{
+#page6 #box::-webkit-scrollbar{
     display: none;
 }
 
-#main #page6 #box .photo{
+#page6 #box .photo{
     flex-shrink: 0;
     display: flex;
     justify-content: flex-start;
@@ -396,7 +397,7 @@ button{
     
 }
 
-#main #page6 #box .photo img{
+#page6 #box .photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -406,14 +407,14 @@ button{
 
 
 
-#main #page7{
+#page7{
     width: 100%;
     height: 100vh;
     background-color:white;
     display: flex;
     align-items: center;
 }
-#main #page7 #overlay{
+#page7 #overlay{
     width: 100%;
     height: 100vh;
     background-color: black;
@@ -422,19 +423,19 @@ button{
 }
 
 
-#main #page7 #box{
+#page7 #box{
     width: 100%;
     height: 75vh;
     /* background-color: tomato; */
 }
-#main #page7 #box .part{
+#page7 #box .part{
     width: 100%;
     height: 25vh;
     display: flex;
     align-items: center;
     justify-content:center;
 } 
-#main #page7 #box .part h1{
+#page7 #box .part h1{
     font-family: gilroy;
     font-size: 15vw;
     text-transform: uppercase;
@@ -442,16 +443,16 @@ button{
     color: white;
     mix-blend-mode: difference;
 }
-#main #page7 #box .part h1 span{
+#page7 #box .part h1 span{
     display: inline-block;
 }
-/* #main #page7 #box #text1{
+/* #page7 #box #text1{
     background-color: springgreen;
 }
-#main #page7 #box #text2{
+#page7 #box #text2{
     background-color: rgb(0, 123, 255);
 }
-#main #page7 #box #text3{
+#page7 #box #text3{
     background-color: rgb(255, 213, 0);
 } */
 
@@ -459,13 +460,13 @@ button{
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Page 8 */
-#main #page8{
+#page8{
     width: 100%;
     height: 100vh;
     background-color: white;
     /* position: relative; */
 }
-#main #page8 #box{
+#page8 #box{
     width: 280%;
     height: 100vh;
     background-color:black;
@@ -476,18 +477,18 @@ button{
     /* justify-content: center; */
     
 }
-#main #page8 h1{
+#page8 h1{
     font-size: 35vw;
     font-family: gilroy;
     color: white;
     display: flex;
     /* background-color: red; */
 }
-/* #main #page8 h1 span{
+/* #page8 h1 span{
     line-height: 1;
     display: inline-flex;
 } */
-/* #main #page8 h1 span:nth-child(even){
+/* #page8 h1 span:nth-child(even){
     color: springgreen;
 } */
 
@@ -495,7 +496,7 @@ button{
 
 
 
-#main #page9{
+#page9{
     widows: 100%;
     height: 150vh;
     background-color: black;
@@ -517,7 +518,7 @@ button{
 }
 
 
-#main #page10{
+#page10{
     widows: 100%;
     height: 100vh;
     background-color: black;
@@ -548,7 +549,7 @@ button{
     border-radius: 50%;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 10s;
 }
-#main #page11{
+#page11{
     widows: 100%;
     height: 100vh;
     background-color: black;
