@@ -464,5 +464,22 @@ function page9(){
 page9();
 
 
+function page11(){
+    gsap.to("#page11 h1",{
+        scrollTrigger:{
+            trigger:"#page11 h1",
+            scroller : "#main",
+            scrub:0.5,
+            start:"bottom 70%",
+            end:"bottom 30%",
+            // markers:true,
+        },
+        scale:10,
+        duration:3
+    })    
+}
+page11();
+
+
 
 
